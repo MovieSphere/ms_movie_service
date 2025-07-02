@@ -162,13 +162,5 @@ public class MovieService {
             return false;
         }
     }
-
-    @PostConstruct
-    public void checkAwsValues() {
-        System.out.println("AWS KEY: " + awsAccessKey);
-        System.out.println("AWS SECRET: " + awsSecretKey);
-        System.out.println("BUCKET: " + bucketName);
-        System.out.println("TMDB: " + tmdbToken);
-    }
 }
 
