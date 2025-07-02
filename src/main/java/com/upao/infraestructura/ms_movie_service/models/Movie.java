@@ -1,41 +1,21 @@
 package com.upao.infraestructura.ms_movie_service.models;
 
+import lombok.Data;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import java.util.List;
+
+@Data
+@Document(collection = "movies")
 public class Movie {
-    private int id;
-    private String name;
-    private String image;
 
-    public Movie() {
-    }
-
-    public Movie(int id, String name, String image) {
-        this.id = id;
-        this.name = name;
-        this.image = image;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getEmail() {
-        return image;
-    }
-
-    public void setEmail(String email) {
-        this.image = email;
-    }
+    @Id
+    private String id;
+    private String title;
+    private String synopsis;
+    private List<String> genres;
+    private double rating;
+    private int releaseYear;
+    private String s3ImageKey;
 }
-
