@@ -24,9 +24,9 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
 
     // AWS SDK for S3
-    implementation 'com.amazonaws:aws-java-sdk-s3:1.12.703'
-    implementation("software.amazon.awssdk:s3")
-    implementation(platform("software.amazon.awssdk:bom:2.27.21")) // Replace with the latest version
+    implementation("com.amazonaws:aws-java-sdk-s3:1.12.787")
+    implementation("software.amazon.awssdk:s3:2.31.74")
+    runtimeOnly("software.amazon.awssdk:bom:2.31.74")
 
     // OkHttp for HTTP requests
     implementation 'com.squareup.okhttp3:okhttp:4.12.0'
